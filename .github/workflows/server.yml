@@ -35,6 +35,8 @@ jobs:
         run: |
           curl -O https://piston-data.mojang.com/v1/objects/886945bfb2b978778c3a0288fd7fab09d315b25f/server.jar
           
-      - name: run server.jar
+      - name: run server.jar 
         run: |
+          java -jar ./server.jar
+          sed -i 's/eula=false/eula=true/' "eula.txt"
           java -jar ./server.jar
