@@ -37,8 +37,8 @@ jobs:
           
       - name: run server.jar 
         run: |
+          echo running in $(wget -q -O - ipinfo.io/ip)
+          echo scroll down to check port
           java -jar ./server.jar
           sed -i 's/eula=false/eula=true/' "eula.txt"
           java -jar ./server.jar
-          echo running in $(wget -q -O - ipinfo.io/ip)
-          echo scroll up to check port
