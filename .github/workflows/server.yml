@@ -41,4 +41,6 @@ jobs:
           echo scroll down to check port
           java -jar ./server.jar
           sed -i 's/eula=false/eula=true/' "eula.txt"
+          sed -i 's/online-mode=true/online-mode=false/' "server.properties"
           java -jar ./server.jar
+          
